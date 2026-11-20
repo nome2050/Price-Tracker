@@ -96,7 +96,7 @@ private fun EmptyState(onBrowser: () -> Unit, onSettings: () -> Unit, onAdd: () 
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.empty_title), style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(start = 8.dp, top = 8.dp))
         Text(stringResource(R.string.empty_body), color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.padding(horizontal = 8.dp))
-        HowCard(stringResource(R.string.empty_a11y_title), stringResource(R.string.empty_a11y_body), onSettings)
+        HowCard(stringResource(R.string.empty_a11y_title), stringResource(R.string.empty_a11y_body), onBrowser)
         HowCard(stringResource(R.string.empty_web_title), stringResource(R.string.empty_web_body), onBrowser)
         HowCard(stringResource(R.string.empty_link_title), stringResource(R.string.empty_link_body), onAdd)
     }

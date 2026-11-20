@@ -8,8 +8,6 @@ object Prefs {
     fun setInterval(c: Context, m: Int) = sp(c).edit().putInt("interval", m).apply()
     fun alerts(c: Context) = sp(c).getBoolean("alerts", true)
     fun setAlerts(c: Context, v: Boolean) = sp(c).edit().putBoolean("alerts", v).apply()
-    fun bubble(c: Context) = sp(c).getBoolean("bubble", true)
-    fun setBubble(c: Context, v: Boolean) = sp(c).edit().putBoolean("bubble", v).apply()
     fun autoCompare(c: Context) = sp(c).getBoolean("autoCompare", true)
     fun setAutoCompare(c: Context, v: Boolean) = sp(c).edit().putBoolean("autoCompare", v).apply()
     fun groqKey(c: Context) = (sp(c).getString("groqKey", "") ?: "").ifBlank { Secrets.GROQ_KEY }

@@ -19,7 +19,6 @@ object Graph {
 
 class Repository(private val ctx: Context, val dao: PriceDao) {
     val items = dao.observeItems()
-    val appItems = dao.observeAppItems()
     fun item(id: Long) = dao.observeItem(id)
     fun points(id: Long) = dao.observePoints(id)
     fun pointsSince(t: Long) = dao.observePointsSince(t)

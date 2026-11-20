@@ -7,12 +7,7 @@
     <string name="notif_target_title">Target reached: %1$s</string>
     <string name="notif_target_text">Now %1$s</string>
     <string name="err_read_price">Couldn\'t read the price. The page may need sign-in or block bots.</string>
-    <string name="scan_none">No prices found on this screen</string>
-    <string name="scan_hint">Tap a price to track it</string>
     <string name="saved">Tracking started</string>
-    <string name="bubble_desc">Track a price on this screen</string>
-    <string name="a11y_description">Lets Price Tracker find prices on your screen so you can tap one to track it, and records tracked prices when they appear in an app. Nothing is sent anywhere except the product pages you track.</string>
-    <string name="tile_label">Track price</string>
     <string name="track_price">Track price</string>
 
     <string name="nav_home">Home</string>
@@ -32,8 +27,8 @@
     <string name="src_manual">Manual</string>
     <string name="empty_title">Start tracking prices</string>
     <string name="empty_body">Three ways to add a product:</string>
-    <string name="empty_a11y_title">Any app</string>
-    <string name="empty_a11y_body">Turn on the accessibility service, then tap the floating tag on any screen and pick a price.</string>
+    <string name="empty_a11y_title">Select text in any app</string>
+    <string name="empty_a11y_body">Select a price in any app or browser and choose Track price from the text menu. Share from any app works too.</string>
     <string name="empty_web_title">Any web page</string>
     <string name="empty_web_body">Open the built-in browser and tap any number on the page.</string>
     <string name="empty_link_title">Paste a link</string>
@@ -82,15 +77,6 @@
     <string name="browser_track">Track</string>
     <string name="browser_not_price">Enter a valid price</string>
 
-    <string name="set_a11y">Track prices in any app</string>
-    <string name="set_a11y_on">Accessibility service is on</string>
-    <string name="set_a11y_off">Accessibility service is off</string>
-    <string name="set_a11y_help">Enable \"Price Tracker\" under Installed apps. If it\'s greyed out (sideloaded APK), open App info, tap ⋮ and choose \"Allow restricted settings\" first.</string>
-    <string name="set_open_a11y">Open</string>
-    <string name="set_app_info">App info</string>
-    <string name="set_bubble">Floating tag button</string>
-    <string name="set_bubble_sub">Tap it over any app or browser to pick a price</string>
-    <string name="set_tile">You can also add the \"Track price\" tile to Quick Settings, or select a price anywhere and choose Track price from the text menu.</string>
     <string name="set_interval">Check interval</string>
     <string name="set_interval_sub">How often tracked links are re-checked in the background</string>
     <string name="set_alerts">Price alerts</string>
@@ -134,4 +120,5 @@
     <string name="set_ai_fail">Key rejected or no network</string>
     <string name="set_ai_on">AI is on</string>
     <string name="set_ai_off">AI is off, add a key</string>
+    <string name="set_tip">In any app or browser, select a price and choose Track price in the text menu, or use Share on a product page.</string>
 </resources>

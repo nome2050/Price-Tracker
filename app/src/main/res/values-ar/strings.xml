@@ -7,12 +7,7 @@
     <string name="notif_target_title">تم بلوغ السعر المستهدف: %1$s</string>
     <string name="notif_target_text">الآن %1$s</string>
     <string name="err_read_price">تعذّرت قراءة السعر. قد تحتاج الصفحة إلى تسجيل الدخول أو تحظر الروبوتات.</string>
-    <string name="scan_none">لا توجد أسعار على هذه الشاشة</string>
-    <string name="scan_hint">اضغط على سعر لتتبّعه</string>
     <string name="saved">بدأ التتبّع</string>
-    <string name="bubble_desc">تتبّع سعرًا على هذه الشاشة</string>
-    <string name="a11y_description">يتيح لمتتبع الأسعار العثور على الأسعار على شاشتك لتضغط عليها وتتبّعها، ويسجّل الأسعار المتتبَّعة عند ظهورها في التطبيقات. لا يُرسل شيء إلا صفحات المنتجات التي تتبّعها.</string>
-    <string name="tile_label">تتبّع السعر</string>
     <string name="track_price">تتبّع السعر</string>
 
     <string name="nav_home">الرئيسية</string>
@@ -36,8 +31,8 @@
     <string name="src_manual">يدوي</string>
     <string name="empty_title">ابدأ بتتبّع الأسعار</string>
     <string name="empty_body">ثلاث طرق لإضافة منتج:</string>
-    <string name="empty_a11y_title">أي تطبيق</string>
-    <string name="empty_a11y_body">فعّل خدمة إمكانية الوصول ثم اضغط على الوسم العائم في أي شاشة واختر السعر.</string>
+    <string name="empty_a11y_title">حدّد نصًا في أي تطبيق</string>
+    <string name="empty_a11y_body">حدّد سعرًا في أي تطبيق أو متصفح واختر تتبّع السعر من قائمة النص. تعمل المشاركة من أي تطبيق أيضًا.</string>
     <string name="empty_web_title">أي صفحة ويب</string>
     <string name="empty_web_body">افتح المتصفح المدمج واضغط على أي رقم في الصفحة.</string>
     <string name="empty_link_title">الصق رابطًا</string>
@@ -86,15 +81,6 @@
     <string name="browser_track">تتبّع</string>
     <string name="browser_not_price">أدخل سعرًا صحيحًا</string>
 
-    <string name="set_a11y">تتبّع الأسعار في أي تطبيق</string>
-    <string name="set_a11y_on">خدمة إمكانية الوصول مفعّلة</string>
-    <string name="set_a11y_off">خدمة إمكانية الوصول متوقفة</string>
-    <string name="set_a11y_help">فعّل «متتبع الأسعار» ضمن التطبيقات المثبّتة. إذا كان معطّلًا (APK من خارج المتجر) افتح معلومات التطبيق واضغط ⋮ ثم «السماح بالإعدادات المقيّدة» أولًا.</string>
-    <string name="set_open_a11y">فتح</string>
-    <string name="set_app_info">معلومات التطبيق</string>
-    <string name="set_bubble">زر الوسم العائم</string>
-    <string name="set_bubble_sub">اضغط عليه فوق أي تطبيق أو متصفح لاختيار سعر</string>
-    <string name="set_tile">يمكنك أيضًا إضافة بلاطة «تتبّع السعر» إلى الإعدادات السريعة، أو تحديد سعر في أي مكان واختيار تتبّع السعر من قائمة النص.</string>
     <string name="set_interval">فترة الفحص</string>
     <string name="set_interval_sub">عدد مرات إعادة فحص الروابط المتتبَّعة في الخلفية</string>
     <string name="set_alerts">تنبيهات الأسعار</string>
@@ -138,4 +124,5 @@
     <string name="set_ai_fail">المفتاح مرفوض أو لا يوجد اتصال</string>
     <string name="set_ai_on">الذكاء الاصطناعي مفعّل</string>
     <string name="set_ai_off">الذكاء الاصطناعي متوقف، أضف مفتاحًا</string>
+    <string name="set_tip">في أي تطبيق أو متصفح حدّد سعرًا واختر تتبّع السعر من قائمة النص، أو استخدم المشاركة في صفحة المنتج.</string>
 </resources>

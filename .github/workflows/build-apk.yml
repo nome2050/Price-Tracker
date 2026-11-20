@@ -27,14 +27,16 @@ jobs:
         with:
           name: price-tracker-apk
           path: PriceTracker-v0.1.${{ github.run_number }}.apk
-      # Every push becomes a GitHub Release. Install the newest APK over the old app: data is kept
+      # Every push becomes the newest GitHub Release. README links to the fixed name PriceTracker.apk,
+      # so the download link always serves the latest build. Installing over the old app keeps data
       # because the signing key is fixed and versionCode rises with each run.
       - name: Publish release
         if: github.event_name == 'push'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "v0.1.${{ github.run_number }}" PriceTracker-v0.1.${{ github.run_number }}.apk \
-            --target "${{ github.sha }}" --prerelease \
+          cp PriceTracker-v0.1.${{ github.run_number }}.apk PriceTracker.apk
+          gh release create "v0.1.${{ github.run_number }}" PriceTracker.apk PriceTracker-v0.1.${{ github.run_number }}.apk \
+            --target "${{ github.sha }}" --latest \
             --title "Price Tracker v0.1.${{ github.run_number }}" \
             --notes "Install over the existing app to update. Your tracked items and history are kept."

@@ -15,9 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.compose.LifecycleResumeEffect
 import com.pricetracker.app.R
-import com.pricetracker.app.a11y.PriceAccessibilityService
 import com.pricetracker.app.core.Prefs
 import com.pricetracker.app.ui.theme.PT
 import com.pricetracker.app.work.Scheduler
@@ -26,32 +24,13 @@ import kotlinx.coroutines.launch
 @Composable
 fun SettingsScreen() {
     val ctx = LocalContext.current
-    var enabled by remember { mutableStateOf(PriceAccessibilityService.isEnabled(ctx)) }
-    LifecycleResumeEffect(Unit) { enabled = PriceAccessibilityService.isEnabled(ctx); onPauseOrDispose { } }
-    var bubble by remember { mutableStateOf(Prefs.bubble(ctx)) }
     var alerts by remember { mutableStateOf(Prefs.alerts(ctx)) }
     var auto by remember { mutableStateOf(Prefs.autoCompare(ctx)) }
     var interval by remember { mutableIntStateOf(Prefs.intervalMinutes(ctx)) }
 
     LazyColumn(Modifier.fillMaxSize().statusBarsPadding(), contentPadding = PaddingValues(16.dp, 0.dp, 16.dp, 48.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Spacer(Modifier.height(56.dp)); Text(stringResource(R.string.nav_settings), style = MaterialTheme.typography.headlineLarge, modifier = Modifier.padding(start = 8.dp)) }
-        item {
-            Card {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Column(Modifier.weight(1f)) {
-                        Text(stringResource(R.string.set_a11y), style = MaterialTheme.typography.titleMedium)
-                        Text(stringResource(if (enabled) R.string.set_a11y_on else R.string.set_a11y_off), color = if (enabled) PT.Down else PT.Up, style = MaterialTheme.typography.labelLarge)
-                    }
-                    Button(onClick = { ctx.startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }) { Text(stringResource(R.string.set_open_a11y)) }
-                }
-                Text(stringResource(R.string.set_a11y_help), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                OutlinedButton(onClick = { ctx.startActivity(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${ctx.packageName}")).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }) {
-                    Text(stringResource(R.string.set_app_info))
-                }
-            }
-        }
-        item { Card { SwitchRow(stringResource(R.string.set_bubble), stringResource(R.string.set_bubble_sub), bubble) { bubble = it; Prefs.setBubble(ctx, it); PriceAccessibilityService.instance?.applyBubble() } } }
-        item { Card { Text(stringResource(R.string.set_tile), style = MaterialTheme.typography.bodyMedium) } }
+        item { Card { Text(stringResource(R.string.set_tip), style = MaterialTheme.typography.bodyMedium) } }
         item {
             Card {
                 Text(stringResource(R.string.set_interval), style = MaterialTheme.typography.titleMedium)
