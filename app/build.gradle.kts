@@ -15,17 +15,27 @@ android {
         applicationId = "com.pricetracker.app"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "0.1.0"
+        // CI passes an ever-increasing build number so every new APK installs as an update over the old one.
+        val build = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull() ?: 1
+        versionCode = build
+        versionName = "0.1.$build"
         val lp = Properties().apply { rootProject.file("local.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) } }
         buildConfigField("String", "GROQ_KEY", "\"${lp.getProperty("groq.key", "")}\"")
     }
 
+    signingConfigs {
+        // One fixed key for every build: Android only accepts an update signed with the same key as the installed app.
+        create("release") {
+            storeFile = rootProject.file("keystore/release.jks")
+            storePassword = "pricetracker-private"
+            keyAlias = "pricetracker"
+            keyPassword = "pricetracker-private"
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
-            // Prototype: sign release with the debug key so the APK is directly installable.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {
@@ -37,6 +47,8 @@ android {
     lint { checkReleaseBuilds = false; abortOnError = false }
     packaging { resources.excludes += "/META-INF/{AL2.0,LGPL2.1}" }
 }
+
+ksp { arg("room.schemaLocation", "$projectDir/schemas") }
 
 dependencies {
     implementation("androidx.core:core-ktx:1.15.0")

@@ -74,7 +74,7 @@ interface PriceDao {
     @Insert suspend fun insertOffers(o: List<Offer>)
 }
 
-@Database(entities = [TrackedItem::class, PricePoint::class, Offer::class], version = 1, exportSchema = false)
+@Database(entities = [TrackedItem::class, PricePoint::class, Offer::class], version = 1, exportSchema = true)
 abstract class AppDb : RoomDatabase() {
     abstract fun dao(): PriceDao
 }

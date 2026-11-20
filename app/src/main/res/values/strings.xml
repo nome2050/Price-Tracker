@@ -98,7 +98,7 @@
     <string name="set_autocompare">Auto Product 360</string>
     <string name="set_autocompare_sub">Search other stores whenever a product is added</string>
     <string name="set_language">Language</string>
-    <string name="set_language_sub">English, हिन्दी, العربية</string>
+    <string name="set_language_sub">English, العربية</string>
     <string name="set_language_btn">Change language</string>
 
     <string name="qt_title">Track this price</string>

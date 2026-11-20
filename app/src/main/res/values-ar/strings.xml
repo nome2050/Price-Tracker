@@ -102,7 +102,7 @@
     <string name="set_autocompare">منتج 360 التلقائي</string>
     <string name="set_autocompare_sub">البحث في المتاجر الأخرى عند إضافة أي منتج</string>
     <string name="set_language">اللغة</string>
-    <string name="set_language_sub">English, हिन्दी, العربية</string>
+    <string name="set_language_sub">English, العربية</string>
     <string name="set_language_btn">تغيير اللغة</string>
 
     <string name="qt_title">تتبّع هذا السعر</string>

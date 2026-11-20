@@ -11,7 +11,8 @@ object Graph {
     lateinit var repo: Repository
     fun init(c: Context) {
         app = c.applicationContext
-        val db = Room.databaseBuilder(app, AppDb::class.java, "tracker.db").fallbackToDestructiveMigration().build()
+        val db = Room.databaseBuilder(app, AppDb::class.java, "tracker.db")// Never wipe user data on upgrade: when the schema changes, bump AppDb.version and add a Migration here.
+            .fallbackToDestructiveMigrationOnDowngrade().build()
         repo = Repository(app, db.dao())
     }
 }
