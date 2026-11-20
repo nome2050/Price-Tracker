@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Price Tracker</string>
+    <string name="channel_alerts">Price alerts</string>
+    <string name="notif_drop_title">Price drop: %1$s</string>
+    <string name="notif_drop_text">Was %1$s, now %2$s</string>
+    <string name="notif_target_title">Target reached: %1$s</string>
+    <string name="notif_target_text">Now %1$s</string>
+    <string name="err_read_price">Couldn\'t read the price. The page may need sign-in or block bots.</string>
+    <string name="scan_none">No prices found on this screen</string>
+    <string name="scan_hint">Tap a price to track it</string>
+    <string name="saved">Tracking started</string>
+    <string name="bubble_desc">Track a price on this screen</string>
+    <string name="a11y_description">Lets Price Tracker find prices on your screen so you can tap one to track it, and records tracked prices when they appear in an app. Nothing is sent anywhere except the product pages you track.</string>
+    <string name="tile_label">Track price</string>
+    <string name="track_price">Track price</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_browser">Browser</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="home_title">Price Tracker</string>
+    <plurals name="home_subtitle">
+        <item quantity="one">%d item tracked</item>
+        <item quantity="other">%d items tracked</item>
+    </plurals>
+    <string name="refresh">Refresh</string>
+    <string name="add">Add</string>
+    <string name="target_fmt">Target %1$s</string>
+    <string name="src_app">From %1$s</string>
+    <string name="src_web">Web</string>
+    <string name="src_manual">Manual</string>
+    <string name="empty_title">Start tracking prices</string>
+    <string name="empty_body">Three ways to add a product:</string>
+    <string name="empty_a11y_title">Any app</string>
+    <string name="empty_a11y_body">Turn on the accessibility service, then tap the floating tag on any screen and pick a price.</string>
+    <string name="empty_web_title">Any web page</string>
+    <string name="empty_web_body">Open the built-in browser and tap any number on the page.</string>
+    <string name="empty_link_title">Paste a link</string>
+    <string name="empty_link_body">Add a product link or enter a price by hand. Share from any app works too.</string>
+
+    <string name="add_title">Add a product</string>
+    <string name="add_link">Product link (optional)</string>
+    <string name="add_name">Name</string>
+    <string name="add_price">Price</string>
+    <string name="add_target">Target price</string>
+    <string name="add_hint">With a link, the price is read automatically and Product 360 will search KSA stores for it.</string>
+    <string name="add_save">Save</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="range_day">Day</string>
+    <string name="range_week">Week</string>
+    <string name="range_month">Month</string>
+    <string name="range_year">Year</string>
+    <string name="range_all">All</string>
+    <string name="lowest">Lowest</string>
+    <string name="average">Average</string>
+    <string name="highest">Highest</string>
+    <string name="target_title">Alert me at</string>
+    <string name="target_hint">Target price</string>
+    <string name="set">Set</string>
+    <string name="check_now">Check now</string>
+    <string name="log_price">Log price</string>
+    <string name="open">Open</string>
+    <string name="history">History</string>
+    <string name="back">Back</string>
+    <string name="delete">Delete</string>
+    <string name="delete_q">Stop tracking this item?</string>
+    <string name="checked_fmt">Checked %1$s</string>
+
+    <string name="p360_title">Product 360</string>
+    <string name="p360_subtitle">Same product on KSA stores and global marketplaces</string>
+    <string name="p360_search">Search</string>
+    <string name="p360_empty">Nothing yet. Tap Search to compare Amazon.sa, Noon, Jarir, Extra, Lulu, Carrefour and more.</string>
+    <string name="p360_best">BEST PRICE</string>
+
+    <string name="browser_url_hint">Search or enter address</string>
+    <string name="browser_tap_mode">Tap any number to track</string>
+    <string name="browser_start_title">Browse and tap a price</string>
+    <string name="browser_start_body">Open a product page. With tap mode on, numbers are highlighted. Tap one to track it.</string>
+    <string name="browser_pick_title">Track this price?</string>
+    <string name="browser_track">Track</string>
+    <string name="browser_not_price">Enter a valid price</string>
+
+    <string name="set_a11y">Track prices in any app</string>
+    <string name="set_a11y_on">Accessibility service is on</string>
+    <string name="set_a11y_off">Accessibility service is off</string>
+    <string name="set_a11y_help">Enable \"Price Tracker\" under Installed apps. If it\'s greyed out (sideloaded APK), open App info, tap ⋮ and choose \"Allow restricted settings\" first.</string>
+    <string name="set_open_a11y">Open</string>
+    <string name="set_app_info">App info</string>
+    <string name="set_bubble">Floating tag button</string>
+    <string name="set_bubble_sub">Tap it over any app or browser to pick a price</string>
+    <string name="set_tile">You can also add the \"Track price\" tile to Quick Settings, or select a price anywhere and choose Track price from the text menu.</string>
+    <string name="set_interval">Check interval</string>
+    <string name="set_interval_sub">How often tracked links are re-checked in the background</string>
+    <string name="set_alerts">Price alerts</string>
+    <string name="set_alerts_sub">Notify on drops and when a target is reached</string>
+    <string name="set_autocompare">Auto Product 360</string>
+    <string name="set_autocompare_sub">Search other stores whenever a product is added</string>
+    <string name="set_language">Language</string>
+    <string name="set_language_sub">English, हिन्दी, العربية</string>
+    <string name="set_language_btn">Change language</string>
+
+    <string name="qt_title">Track this price</string>
+    <string name="qt_loading">Reading…</string>
+    <string name="qt_track">Start tracking</string>
+</resources>

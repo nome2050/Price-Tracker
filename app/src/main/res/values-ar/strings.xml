@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">متتبع الأسعار</string>
+    <string name="channel_alerts">تنبيهات الأسعار</string>
+    <string name="notif_drop_title">انخفض السعر: %1$s</string>
+    <string name="notif_drop_text">كان %1$s والآن %2$s</string>
+    <string name="notif_target_title">تم بلوغ السعر المستهدف: %1$s</string>
+    <string name="notif_target_text">الآن %1$s</string>
+    <string name="err_read_price">تعذّرت قراءة السعر. قد تحتاج الصفحة إلى تسجيل الدخول أو تحظر الروبوتات.</string>
+    <string name="scan_none">لا توجد أسعار على هذه الشاشة</string>
+    <string name="scan_hint">اضغط على سعر لتتبّعه</string>
+    <string name="saved">بدأ التتبّع</string>
+    <string name="bubble_desc">تتبّع سعرًا على هذه الشاشة</string>
+    <string name="a11y_description">يتيح لمتتبع الأسعار العثور على الأسعار على شاشتك لتضغط عليها وتتبّعها، ويسجّل الأسعار المتتبَّعة عند ظهورها في التطبيقات. لا يُرسل شيء إلا صفحات المنتجات التي تتبّعها.</string>
+    <string name="tile_label">تتبّع السعر</string>
+    <string name="track_price">تتبّع السعر</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_browser">المتصفح</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <string name="home_title">متتبع الأسعار</string>
+    <plurals name="home_subtitle">
+        <item quantity="zero">لا توجد منتجات متتبَّعة</item>
+        <item quantity="one">منتج واحد متتبَّع</item>
+        <item quantity="two">منتجان متتبَّعان</item>
+        <item quantity="few">%d منتجات متتبَّعة</item>
+        <item quantity="many">%d منتجًا متتبَّعًا</item>
+        <item quantity="other">%d منتج متتبَّع</item>
+    </plurals>
+    <string name="refresh">تحديث</string>
+    <string name="add">إضافة</string>
+    <string name="target_fmt">الهدف %1$s</string>
+    <string name="src_app">من %1$s</string>
+    <string name="src_web">الويب</string>
+    <string name="src_manual">يدوي</string>
+    <string name="empty_title">ابدأ بتتبّع الأسعار</string>
+    <string name="empty_body">ثلاث طرق لإضافة منتج:</string>
+    <string name="empty_a11y_title">أي تطبيق</string>
+    <string name="empty_a11y_body">فعّل خدمة إمكانية الوصول ثم اضغط على الوسم العائم في أي شاشة واختر السعر.</string>
+    <string name="empty_web_title">أي صفحة ويب</string>
+    <string name="empty_web_body">افتح المتصفح المدمج واضغط على أي رقم في الصفحة.</string>
+    <string name="empty_link_title">الصق رابطًا</string>
+    <string name="empty_link_body">أضف رابط المنتج أو أدخل السعر يدويًا. تعمل المشاركة من أي تطبيق أيضًا.</string>
+
+    <string name="add_title">إضافة منتج</string>
+    <string name="add_link">رابط المنتج (اختياري)</string>
+    <string name="add_name">الاسم</string>
+    <string name="add_price">السعر</string>
+    <string name="add_target">السعر المستهدف</string>
+    <string name="add_hint">مع الرابط تُقرأ الأسعار تلقائيًا ويبحث «منتج 360» في متاجر السعودية.</string>
+    <string name="add_save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="range_day">يوم</string>
+    <string name="range_week">أسبوع</string>
+    <string name="range_month">شهر</string>
+    <string name="range_year">سنة</string>
+    <string name="range_all">الكل</string>
+    <string name="lowest">الأدنى</string>
+    <string name="average">المتوسط</string>
+    <string name="highest">الأعلى</string>
+    <string name="target_title">نبّهني عند</string>
+    <string name="target_hint">السعر المستهدف</string>
+    <string name="set">تعيين</string>
+    <string name="check_now">تحقق الآن</string>
+    <string name="log_price">تسجيل سعر</string>
+    <string name="open">فتح</string>
+    <string name="history">السجل</string>
+    <string name="back">رجوع</string>
+    <string name="delete">حذف</string>
+    <string name="delete_q">إيقاف تتبّع هذا المنتج؟</string>
+    <string name="checked_fmt">آخر فحص %1$s</string>
+
+    <string name="p360_title">منتج 360</string>
+    <string name="p360_subtitle">المنتج نفسه في متاجر السعودية والأسواق العالمية</string>
+    <string name="p360_search">بحث</string>
+    <string name="p360_empty">لا شيء بعد. اضغط بحث لمقارنة أمازون السعودية ونون وجرير وإكسترا ولولو وكارفور وغيرها.</string>
+    <string name="p360_best">أفضل سعر</string>
+
+    <string name="browser_url_hint">ابحث أو أدخل العنوان</string>
+    <string name="browser_tap_mode">اضغط على أي رقم لتتبّعه</string>
+    <string name="browser_start_title">تصفّح واضغط على السعر</string>
+    <string name="browser_start_body">افتح صفحة منتج. عند تفعيل وضع الضغط تظهر الأرقام مميّزة. اضغط على أحدها لتتبّعه.</string>
+    <string name="browser_pick_title">تتبّع هذا السعر؟</string>
+    <string name="browser_track">تتبّع</string>
+    <string name="browser_not_price">أدخل سعرًا صحيحًا</string>
+
+    <string name="set_a11y">تتبّع الأسعار في أي تطبيق</string>
+    <string name="set_a11y_on">خدمة إمكانية الوصول مفعّلة</string>
+    <string name="set_a11y_off">خدمة إمكانية الوصول متوقفة</string>
+    <string name="set_a11y_help">فعّل «متتبع الأسعار» ضمن التطبيقات المثبّتة. إذا كان معطّلًا (APK من خارج المتجر) افتح معلومات التطبيق واضغط ⋮ ثم «السماح بالإعدادات المقيّدة» أولًا.</string>
+    <string name="set_open_a11y">فتح</string>
+    <string name="set_app_info">معلومات التطبيق</string>
+    <string name="set_bubble">زر الوسم العائم</string>
+    <string name="set_bubble_sub">اضغط عليه فوق أي تطبيق أو متصفح لاختيار سعر</string>
+    <string name="set_tile">يمكنك أيضًا إضافة بلاطة «تتبّع السعر» إلى الإعدادات السريعة، أو تحديد سعر في أي مكان واختيار تتبّع السعر من قائمة النص.</string>
+    <string name="set_interval">فترة الفحص</string>
+    <string name="set_interval_sub">عدد مرات إعادة فحص الروابط المتتبَّعة في الخلفية</string>
+    <string name="set_alerts">تنبيهات الأسعار</string>
+    <string name="set_alerts_sub">إشعار عند الانخفاض وعند بلوغ الهدف</string>
+    <string name="set_autocompare">منتج 360 التلقائي</string>
+    <string name="set_autocompare_sub">البحث في المتاجر الأخرى عند إضافة أي منتج</string>
+    <string name="set_language">اللغة</string>
+    <string name="set_language_sub">English, हिन्दी, العربية</string>
+    <string name="set_language_btn">تغيير اللغة</string>
+
+    <string name="qt_title">تتبّع هذا السعر</string>
+    <string name="qt_loading">جارٍ القراءة…</string>
+    <string name="qt_track">ابدأ التتبّع</string>
+</resources>

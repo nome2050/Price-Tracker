@@ -1,0 +1,15 @@
+package com.pricetracker.app.core
+
+import android.content.Context
+
+object Prefs {
+    private fun sp(c: Context) = c.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+    fun intervalMinutes(c: Context) = sp(c).getInt("interval", 60)
+    fun setInterval(c: Context, m: Int) = sp(c).edit().putInt("interval", m).apply()
+    fun alerts(c: Context) = sp(c).getBoolean("alerts", true)
+    fun setAlerts(c: Context, v: Boolean) = sp(c).edit().putBoolean("alerts", v).apply()
+    fun bubble(c: Context) = sp(c).getBoolean("bubble", true)
+    fun setBubble(c: Context, v: Boolean) = sp(c).edit().putBoolean("bubble", v).apply()
+    fun autoCompare(c: Context) = sp(c).getBoolean("autoCompare", true)
+    fun setAutoCompare(c: Context, v: Boolean) = sp(c).edit().putBoolean("autoCompare", v).apply()
+}
