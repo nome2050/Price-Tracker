@@ -69,6 +69,7 @@ interface PriceDao {
     @Query("SELECT * FROM prices WHERE itemId=:id ORDER BY ts DESC LIMIT 1") suspend fun lastPoint(id: Long): PricePoint?
 
     @Query("SELECT * FROM offers WHERE itemId=:id ORDER BY price ASC") fun observeOffers(id: Long): Flow<List<Offer>>
+    @Query("SELECT * FROM offers") fun observeAllOffers(): Flow<List<Offer>>
     @Query("DELETE FROM offers WHERE itemId=:id") suspend fun clearOffers(id: Long)
     @Insert suspend fun insertOffers(o: List<Offer>)
 }

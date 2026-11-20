@@ -85,4 +85,15 @@ object Ai {
             "Product: $name\nCurrency: ${currency ?: "unknown"}\nTarget price: ${target ?: "none"}\nPrice history (date price): $h\nOther stores: ${offers.take(8).joinToString("; ").ifBlank { "none" }}",
             false)?.trim()
     }
+
+    suspend fun ping(ctx: Context): Boolean = chat(ctx, "Reply with the single word OK.", "ping", false) != null
+
+    /** Portfolio-level insight for the dashboard. */
+    suspend fun portfolio(ctx: Context, lines: List<String>): String? {
+        val lang = Locale.getDefault().getDisplayLanguage(Locale.ENGLISH)
+        return chat(ctx,
+            "You are a concise shopping analyst. From the tracked products below, say in at most 4 short sentences what to buy now, " +
+                "what to wait on, and where the biggest savings are. Use only the data given. Answer in $lang.",
+            lines.take(40).joinToString("\n"), false)?.trim()
+    }
 }

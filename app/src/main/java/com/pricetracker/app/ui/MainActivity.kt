@@ -13,6 +13,7 @@ import androidx.activity.viewModels
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.automirrored.filled.List
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
@@ -60,6 +61,7 @@ private fun App(vm: MainViewModel, startItem: Long, consumed: () -> Unit) {
     LaunchedEffect(startItem) { if (startItem > 0) { nav.navigate("detail/$startItem"); consumed() } }
     val tabs = listOf(
         Triple("home", R.string.nav_home, Icons.Filled.Home),
+        Triple("dashboard", R.string.nav_dashboard, Icons.AutoMirrored.Filled.List),
         Triple("browser", R.string.nav_browser, Icons.Filled.Search),
         Triple("settings", R.string.nav_settings, Icons.Filled.Settings),
     )
@@ -79,6 +81,7 @@ private fun App(vm: MainViewModel, startItem: Long, consumed: () -> Unit) {
     ) { pad ->
         NavHost(nav, "home", Modifier.padding(bottom = pad.calculateBottomPadding())) {
             composable("home") { HomeScreen(vm, { nav.navigate("detail/$it") }, { nav.navigate("browser") }, { nav.navigate("settings") }) }
+            composable("dashboard") { DashboardScreen(vm, { nav.navigate("detail/$it") }, { nav.navigate("settings") }) }
             composable("browser") { BrowserScreen(vm) { nav.navigate("detail/$it") } }
             composable("settings") { SettingsScreen() }
             composable("detail/{id}", listOf(navArgument("id") { type = NavType.LongType })) {

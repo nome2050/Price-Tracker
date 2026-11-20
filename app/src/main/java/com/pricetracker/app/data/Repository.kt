@@ -23,6 +23,7 @@ class Repository(private val ctx: Context, val dao: PriceDao) {
     fun points(id: Long) = dao.observePoints(id)
     fun pointsSince(t: Long) = dao.observePointsSince(t)
     fun offers(id: Long) = dao.observeOffers(id)
+    val allOffers = dao.observeAllOffers()
 
     suspend fun addItem(item: TrackedItem, price: Double?): Long {
         val now = System.currentTimeMillis()

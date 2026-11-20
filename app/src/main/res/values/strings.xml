@@ -112,4 +112,26 @@
     <string name="set_ai">AI (Groq)</string>
     <string name="set_ai_sub">Matches the same product across stores, reads prices on odd pages and gives buy-or-wait advice. The key stays on this phone.</string>
     <string name="set_ai_key">Groq API key</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="dash_title">Dashboard</string>
+    <string name="dash_sub">Live across all your products</string>
+    <string name="kpi_tracked">Tracked</string>
+    <string name="kpi_savings">Savings found</string>
+    <string name="kpi_drops">Drops in 24h</string>
+    <string name="kpi_target">At target</string>
+    <string name="dash_index">Basket price index</string>
+    <string name="dash_index_sub">100 = first price seen</string>
+    <string name="dash_ai">AI insight</string>
+    <string name="dash_ai_hint">Ask for what to buy now, what to wait on and where the savings are.</string>
+    <string name="dash_add_key">Add AI key</string>
+    <string name="dash_cheaper">Cheaper elsewhere</string>
+    <string name="dash_cheaper_sub">Product 360 found a lower price</string>
+    <string name="dash_cheaper_empty">Nothing cheaper found yet. Product 360 runs when you add a product.</string>
+    <string name="dash_drops">Recent price moves</string>
+    <string name="dash_drops_empty">No price changes recorded yet.</string>
+    <string name="set_ai_test">Test key</string>
+    <string name="set_ai_ok">Key works</string>
+    <string name="set_ai_fail">Key rejected or no network</string>
+    <string name="set_ai_on">AI is on</string>
+    <string name="set_ai_off">AI is off, add a key</string>
 </resources>

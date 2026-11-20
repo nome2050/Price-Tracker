@@ -19,6 +19,15 @@ class MainViewModel(private val app: Application) : AndroidViewModel(app) {
         repo.pointsSince(System.currentTimeMillis() - 30L * 86_400_000).map { l -> l.groupBy { it.itemId } }
             .stateIn(viewModelScope, SharingStarted.Eagerly, emptyMap())
 
+    val allOffers: StateFlow<List<Offer>> = repo.allOffers.stateIn(viewModelScope, SharingStarted.Eagerly, emptyList())
+    val insight = MutableStateFlow<String?>(null)
+    val insightBusy = MutableStateFlow(false)
+    fun askPortfolio(lines: List<String>) = viewModelScope.launch {
+        insightBusy.value = true
+        insight.value = com.pricetracker.app.core.Ai.portfolio(app, lines) ?: ""
+        insightBusy.value = false
+    }
+
     val refreshing = MutableStateFlow(false)
     val comparing = MutableStateFlow<Set<Long>>(emptySet())
 

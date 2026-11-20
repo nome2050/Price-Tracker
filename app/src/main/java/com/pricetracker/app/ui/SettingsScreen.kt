@@ -21,6 +21,7 @@ import com.pricetracker.app.a11y.PriceAccessibilityService
 import com.pricetracker.app.core.Prefs
 import com.pricetracker.app.ui.theme.PT
 import com.pricetracker.app.work.Scheduler
+import kotlinx.coroutines.launch
 
 @Composable
 fun SettingsScreen() {
@@ -77,6 +78,19 @@ fun SettingsScreen() {
                 OutlinedTextField(key, { key = it; Prefs.setGroqKey(ctx, it) }, singleLine = true, modifier = Modifier.fillMaxWidth(),
                     shape = MaterialTheme.shapes.medium, label = { Text(stringResource(R.string.set_ai_key)) },
                     visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation())
+                var status by remember { mutableStateOf<Boolean?>(null) }
+                var testing by remember { mutableStateOf(false) }
+                val scope = androidx.compose.runtime.rememberCoroutineScope()
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Button(enabled = !testing, onClick = {
+                        testing = true; status = null
+                        scope.launch { status = com.pricetracker.app.core.Ai.ping(ctx); testing = false }
+                    }) { Text(stringResource(R.string.set_ai_test)) }
+                    if (testing) CircularProgressIndicator(Modifier.size(22.dp), strokeWidth = 2.dp)
+                    status?.let { Text(stringResource(if (it) R.string.set_ai_ok else R.string.set_ai_fail), color = if (it) PT.Down else PT.Up) }
+                    if (status == null && !testing) Text(stringResource(if (Prefs.groqKey(ctx).isNotBlank()) R.string.set_ai_on else R.string.set_ai_off),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelLarge)
+                }
             }
         }
         item {

@@ -116,4 +116,26 @@
     <string name="set_ai">الذكاء الاصطناعي (Groq)</string>
     <string name="set_ai_sub">يطابق المنتج نفسه عبر المتاجر ويقرأ الأسعار في الصفحات الغريبة وينصح بالشراء أو الانتظار. يبقى المفتاح على هذا الهاتف.</string>
     <string name="set_ai_key">مفتاح Groq API</string>
+    <string name="nav_dashboard">لوحة المعلومات</string>
+    <string name="dash_title">لوحة المعلومات</string>
+    <string name="dash_sub">نظرة مباشرة على كل منتجاتك</string>
+    <string name="kpi_tracked">متتبَّعة</string>
+    <string name="kpi_savings">التوفير المكتشف</string>
+    <string name="kpi_drops">انخفاضات 24 ساعة</string>
+    <string name="kpi_target">عند الهدف</string>
+    <string name="dash_index">مؤشر سلة الأسعار</string>
+    <string name="dash_index_sub">100 = أول سعر تمت رؤيته</string>
+    <string name="dash_ai">رؤية الذكاء الاصطناعي</string>
+    <string name="dash_ai_hint">اسأل ماذا تشتري الآن وما الذي تنتظره وأين التوفير.</string>
+    <string name="dash_add_key">أضف مفتاح الذكاء الاصطناعي</string>
+    <string name="dash_cheaper">أرخص في مكان آخر</string>
+    <string name="dash_cheaper_sub">وجد «منتج 360» سعرًا أقل</string>
+    <string name="dash_cheaper_empty">لم يُعثر على أرخص بعد. يعمل «منتج 360» عند إضافة منتج.</string>
+    <string name="dash_drops">آخر تغيّرات الأسعار</string>
+    <string name="dash_drops_empty">لا تغيّرات في الأسعار مسجّلة بعد.</string>
+    <string name="set_ai_test">اختبار المفتاح</string>
+    <string name="set_ai_ok">المفتاح يعمل</string>
+    <string name="set_ai_fail">المفتاح مرفوض أو لا يوجد اتصال</string>
+    <string name="set_ai_on">الذكاء الاصطناعي مفعّل</string>
+    <string name="set_ai_off">الذكاء الاصطناعي متوقف، أضف مفتاحًا</string>
 </resources>

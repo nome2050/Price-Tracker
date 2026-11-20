@@ -112,4 +112,26 @@
     <string name="set_ai">AI (Groq)</string>
     <string name="set_ai_sub">स्टोर्स में वही प्रोडक्ट पहचानता है, अजीब पेजों से कीमत पढ़ता है और खरीदने या रुकने की सलाह देता है। कुंजी इसी फ़ोन पर रहती है।</string>
     <string name="set_ai_key">Groq API कुंजी</string>
+    <string name="nav_dashboard">डैशबोर्ड</string>
+    <string name="dash_title">डैशबोर्ड</string>
+    <string name="dash_sub">आपके सभी प्रोडक्ट्स का लाइव हाल</string>
+    <string name="kpi_tracked">ट्रैक किए गए</string>
+    <string name="kpi_savings">बचत मिली</string>
+    <string name="kpi_drops">24 घंटे में गिरावट</string>
+    <string name="kpi_target">लक्ष्य पर</string>
+    <string name="dash_index">बास्केट प्राइस इंडेक्स</string>
+    <string name="dash_index_sub">100 = पहली देखी गई कीमत</string>
+    <string name="dash_ai">AI इनसाइट</string>
+    <string name="dash_ai_hint">पूछें कि अभी क्या खरीदें, किसका इंतज़ार करें और बचत कहाँ है।</string>
+    <string name="dash_add_key">AI कुंजी जोड़ें</string>
+    <string name="dash_cheaper">कहीं और सस्ता</string>
+    <string name="dash_cheaper_sub">प्रोडक्ट 360 को कम कीमत मिली</string>
+    <string name="dash_cheaper_empty">अभी कुछ सस्ता नहीं मिला। प्रोडक्ट जोड़ने पर प्रोडक्ट 360 चलता है।</string>
+    <string name="dash_drops">हाल के कीमत बदलाव</string>
+    <string name="dash_drops_empty">अभी कोई कीमत बदलाव दर्ज नहीं हुआ।</string>
+    <string name="set_ai_test">कुंजी जाँचें</string>
+    <string name="set_ai_ok">कुंजी काम कर रही है</string>
+    <string name="set_ai_fail">कुंजी अस्वीकृत या नेटवर्क नहीं</string>
+    <string name="set_ai_on">AI चालू है</string>
+    <string name="set_ai_off">AI बंद है, कुंजी जोड़ें</string>
 </resources>
