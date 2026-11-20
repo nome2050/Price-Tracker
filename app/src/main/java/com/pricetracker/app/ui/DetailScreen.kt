@@ -109,6 +109,25 @@ fun DetailScreen(id: Long, vm: MainViewModel, onBack: () -> Unit) {
                 }
             }
         }
+        item {
+            val adv by vm.advice.collectAsState()
+            val busy by vm.advising.collectAsState()
+            val has = com.pricetracker.app.core.Ai.available(ctx)
+            Surface(shape = MaterialTheme.shapes.large, color = MaterialTheme.colorScheme.surfaceContainer) {
+                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Text(stringResource(R.string.ai_title), Modifier.weight(1f), style = MaterialTheme.typography.titleMedium)
+                        if (busy) CircularProgressIndicator(Modifier.size(24.dp), strokeWidth = 3.dp)
+                        else FilledTonalButton(onClick = { vm.askAdvice(it0, points, offers) }, enabled = has) { Text(stringResource(R.string.ai_ask)) }
+                    }
+                    val a = adv[id]
+                    Text(
+                        when { !has -> stringResource(R.string.ai_need_key); a == null -> stringResource(R.string.ai_hint); a.isBlank() -> stringResource(R.string.ai_error); else -> a },
+                        style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
+        }
         // ---------- Product 360 ----------
         item { Product360(it0.id, offers, it0.currentPrice, it0.currency, id in comparing, onRefresh = { vm.compare(id) }, onOpen = { u -> open(ctx, u, null) }) }
 

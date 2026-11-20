@@ -12,4 +12,6 @@ object Prefs {
     fun setBubble(c: Context, v: Boolean) = sp(c).edit().putBoolean("bubble", v).apply()
     fun autoCompare(c: Context) = sp(c).getBoolean("autoCompare", true)
     fun setAutoCompare(c: Context, v: Boolean) = sp(c).edit().putBoolean("autoCompare", v).apply()
+    fun groqKey(c: Context) = sp(c).getString("groqKey", "") ?: ""
+    fun setGroqKey(c: Context, k: String) = sp(c).edit().putString("groqKey", k.trim()).apply()
 }

@@ -104,4 +104,12 @@
     <string name="qt_title">यह कीमत ट्रैक करें</string>
     <string name="qt_loading">पढ़ रहा है…</string>
     <string name="qt_track">ट्रैकिंग शुरू करें</string>
+    <string name="ai_title">AI सलाह</string>
+    <string name="ai_ask">AI से पूछें</string>
+    <string name="ai_hint">इस कीमत इतिहास और दूसरे स्टोर्स के आधार पर खरीदने या रुकने की छोटी सलाह पाएँ।</string>
+    <string name="ai_need_key">AI सलाह चालू करने के लिए सेटिंग्स में अपनी मुफ़्त Groq कुंजी जोड़ें।</string>
+    <string name="ai_error">AI अभी जवाब नहीं दे सका। कुंजी जाँचें या एक मिनट बाद फिर कोशिश करें।</string>
+    <string name="set_ai">AI (Groq)</string>
+    <string name="set_ai_sub">स्टोर्स में वही प्रोडक्ट पहचानता है, अजीब पेजों से कीमत पढ़ता है और खरीदने या रुकने की सलाह देता है। कुंजी इसी फ़ोन पर रहती है।</string>
+    <string name="set_ai_key">Groq API कुंजी</string>
 </resources>

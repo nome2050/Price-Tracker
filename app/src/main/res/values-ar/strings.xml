@@ -108,4 +108,12 @@
     <string name="qt_title">تتبّع هذا السعر</string>
     <string name="qt_loading">جارٍ القراءة…</string>
     <string name="qt_track">ابدأ التتبّع</string>
+    <string name="ai_title">نصيحة الذكاء الاصطناعي</string>
+    <string name="ai_ask">اسأل الذكاء الاصطناعي</string>
+    <string name="ai_hint">احصل على رأي قصير حول الشراء الآن أو الانتظار بناءً على سجل السعر والمتاجر الأخرى.</string>
+    <string name="ai_need_key">أضف مفتاح Groq المجاني في الإعدادات لتفعيل النصيحة.</string>
+    <string name="ai_error">تعذّر على الذكاء الاصطناعي الرد الآن. تحقق من المفتاح أو حاول بعد دقيقة.</string>
+    <string name="set_ai">الذكاء الاصطناعي (Groq)</string>
+    <string name="set_ai_sub">يطابق المنتج نفسه عبر المتاجر ويقرأ الأسعار في الصفحات الغريبة وينصح بالشراء أو الانتظار. يبقى المفتاح على هذا الهاتف.</string>
+    <string name="set_ai_key">مفتاح Groq API</string>
 </resources>

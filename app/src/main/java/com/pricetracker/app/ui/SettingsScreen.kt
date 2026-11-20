@@ -70,6 +70,16 @@ fun SettingsScreen() {
             }
         }
         item {
+            var key by remember { mutableStateOf(Prefs.groqKey(ctx)) }
+            Card {
+                Text(stringResource(R.string.set_ai), style = MaterialTheme.typography.titleMedium)
+                Text(stringResource(R.string.set_ai_sub), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                OutlinedTextField(key, { key = it; Prefs.setGroqKey(ctx, it) }, singleLine = true, modifier = Modifier.fillMaxWidth(),
+                    shape = MaterialTheme.shapes.medium, label = { Text(stringResource(R.string.set_ai_key)) },
+                    visualTransformation = androidx.compose.ui.text.input.PasswordVisualTransformation())
+            }
+        }
+        item {
             Card {
                 Text(stringResource(R.string.set_language), style = MaterialTheme.typography.titleMedium)
                 Text(stringResource(R.string.set_language_sub), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)

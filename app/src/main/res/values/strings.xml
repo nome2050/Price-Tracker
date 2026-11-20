@@ -104,4 +104,12 @@
     <string name="qt_title">Track this price</string>
     <string name="qt_loading">Reading…</string>
     <string name="qt_track">Start tracking</string>
+    <string name="ai_title">AI advice</string>
+    <string name="ai_ask">Ask AI</string>
+    <string name="ai_hint">Get a short buy-or-wait opinion based on this price history and other stores.</string>
+    <string name="ai_need_key">Add your free Groq key in Settings to enable AI advice.</string>
+    <string name="ai_error">The AI could not answer right now. Check the key or try again in a minute.</string>
+    <string name="set_ai">AI (Groq)</string>
+    <string name="set_ai_sub">Matches the same product across stores, reads prices on odd pages and gives buy-or-wait advice. The key stays on this phone.</string>
+    <string name="set_ai_key">Groq API key</string>
 </resources>

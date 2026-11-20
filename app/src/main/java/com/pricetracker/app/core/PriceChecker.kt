@@ -7,8 +7,14 @@ import com.pricetracker.app.data.TrackedItem
 
 object PriceChecker {
     suspend fun preview(ctx: Context, url: String, selector: String? = null): Extracted? {
-        PageFetcher.http(url)?.let { HtmlExtractor.extract(it, selector, url) }?.let { return it }
-        return PageFetcher.rendered(ctx, url)?.let { HtmlExtractor.extract(it, selector, url) }
+        val html = PageFetcher.http(url)
+        html?.let { HtmlExtractor.extract(it, selector, url) }?.let { return it }
+        val rendered = PageFetcher.rendered(ctx, url)
+        rendered?.let { HtmlExtractor.extract(it, selector, url) }?.let { return it }
+        // Last resort: let the AI read the page text (only for items without a user-picked selector).
+        val src = rendered ?: html
+        if (src != null && selector == null) Ai.extractPrice(ctx, src)?.let { return it }
+        return null
     }
 
     suspend fun check(ctx: Context, item: TrackedItem): Boolean {

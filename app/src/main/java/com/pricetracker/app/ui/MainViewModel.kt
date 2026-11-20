@@ -62,6 +62,16 @@ class MainViewModel(private val app: Application) : AndroidViewModel(app) {
         onDone(id, p != null)
     }
 
+    val advice = MutableStateFlow<Map<Long, String>>(emptyMap())
+    val advising = MutableStateFlow(false)
+    fun askAdvice(item: TrackedItem, points: List<PricePoint>, offers: List<Offer>) = viewModelScope.launch {
+        advising.value = true
+        val r = com.pricetracker.app.core.Ai.advice(app, item.name, points.map { it.ts to it.price }, item.currency,
+            offers.map { "${it.store} ${it.price}" }, item.targetPrice)
+        advice.value = advice.value + (item.id to (r ?: ""))
+        advising.value = false
+    }
+
     fun delete(id: Long) = viewModelScope.launch { repo.delete(id) }
     fun setTarget(item: TrackedItem, t: Double?) = viewModelScope.launch { repo.update(item.copy(targetPrice = t)) }
     fun rename(item: TrackedItem, n: String) = viewModelScope.launch { repo.update(item.copy(name = n)) }

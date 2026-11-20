@@ -40,16 +40,24 @@ object Compare {
         val item = Graph.repo.get(itemId) ?: return 0
         val query = cleanQuery(item.name)
         if (query.isBlank()) return 0
-        val found = ArrayList<Offer>()
         val now = System.currentTimeMillis()
+        val aiOn = Ai.available(ctx)
+        val all = ArrayList<Pair<Store, SearchHit>>()
         for (s in stores) {
             val url = s.searchUrl(query)
             val html = PageFetcher.rendered(ctx, url, 4500) ?: PageFetcher.http(url) ?: continue
             val hits = HtmlExtractor.searchHits(html, url, 12)
-                .filter { relevance(query, it.title) >= 0.5 }
-                .sortedBy { it.price }.take(3)
-            for (h in hits) found += Offer(itemId = itemId, store = s.name, title = h.title, price = h.price,
-                currency = h.currency ?: s.currency, url = h.url, ts = now)
+                .filter { relevance(query, it.title) >= (if (aiOn) 0.34 else 0.5) }
+                .sortedBy { it.price }.take(if (aiOn) 5 else 3)
+            hits.forEach { all += s to it }
+        }
+        // AI decides which candidates are really the same product (same model, size, capacity; not accessories).
+        val keep = if (aiOn && all.isNotEmpty()) Ai.sameProduct(ctx, item.name, all.map { it.second.title + " | " + it.second.price }) else null
+        val chosen = if (keep != null) all.filterIndexed { i, _ -> i in keep } else all
+        val found = chosen.groupBy { it.first }.flatMap { (s, l) ->
+            l.map { it.second }.sortedBy { it.price }.take(3).map { h ->
+                Offer(itemId = itemId, store = s.name, title = h.title, price = h.price, currency = h.currency ?: s.currency, url = h.url, ts = now)
+            }
         }
         Graph.repo.replaceOffers(itemId, found)
         return found.size
